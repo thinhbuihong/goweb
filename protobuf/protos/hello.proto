@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package main;
+
+message StringM{
+	string value = 1;
+}
+
+service HelloService{
+	rpc Hello(StringM) returns (StringM);
+}
