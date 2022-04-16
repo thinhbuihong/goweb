@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package HelloSV;
+
+message StringM{
+	string value = 1;
+}
+
+service HelloService{
+	rpc Hello (StringM) returns (StringM);
+
+	rpc BiChannel (stream StringM) returns (stream StringM);
+}
+
